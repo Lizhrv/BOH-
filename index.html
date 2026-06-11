@@ -9,7 +9,7 @@
 </head>
 <body>
   <div class="announcement-bar">
-    BELLEZA NATURAL HECHA A MANO · ENVÍOS A TODO MÉXICO Y ESTADOS UNIDOS
+    BELLEZA NATURAL HECHA A MANO · ENVÍOS A TODO MÉXICO
   </div>
   <header class="site-header">
     <div class="header-inner">
@@ -66,14 +66,15 @@
     <aside class="filters">
       <div class="filter-group">
         <h3>Disponibilidad</h3>
-        <label><input type="checkbox" checked> En existencia <span>(6)</span></label>
-        <label><input type="checkbox"> Agotado <span>(0)</span></label>
+        <label><input type="checkbox" data-group="stock" data-value="in"> En existencia <span>(6)</span></label>
+        <label><input type="checkbox" data-group="stock" data-value="out"> Agotado <span>(0)</span></label>
       </div>
       <div class="filter-group">
         <h3>Aroma</h3>
-        <label><input type="checkbox"> Floral <span>(2)</span></label>
-        <label><input type="checkbox"> Relajante <span>(1)</span></label>
-        <label><input type="checkbox"> Piel sensible <span>(2)</span></label>
+        <label><input type="checkbox" data-group="aroma" data-value="floral"> Floral <span>(2)</span></label>
+        <label><input type="checkbox" data-group="aroma" data-value="relajante"> Relajante <span>(1)</span></label>
+        <label><input type="checkbox" data-group="aroma" data-value="sensible"> Piel sensible <span>(2)</span></label>
+        <label><input type="checkbox" data-group="aroma" data-value="hidratante"> Hidratante <span>(1)</span></label>
       </div>
       <div class="filter-group price-fixed">
         <h3>Precio único</h3>
