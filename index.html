@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jabones Artesanales – Bohí</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+</head>
+<body>
+  <div class="announcement-bar">
+    BELLEZA NATURAL HECHA A MANO · ENVÍOS A TODO MÉXICO Y ESTADOS UNIDOS
+  </div>
+  <header class="site-header">
+    <div class="header-inner">
+      <button class="hamburger" aria-label="Menú" onclick="document.querySelector('.main-nav').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+
+      <a href="#" class="logo" onclick="openLogo(event)">
+        <img src="images/logo-sq.jpg" alt="Bohí · Jabones Artesanales" class="logo-img"
+             onerror="this.style.display='none';document.getElementById('logoText').style.display='flex'">
+        <span class="logo-text" id="logoText">
+          <span class="logo-mark">✻</span>
+          <span class="logo-name">Bohí</span>
+          <span class="logo-sub">Jabones Artesanales</span>
+        </span>
+      </a>
+
+      <nav class="main-nav">
+        <a href="#" class="active">Jabones</a>
+        <a href="#ingredientes">Ingredientes</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#empaque">Empaque</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <div class="header-icons">
+        <a href="#" aria-label="Facebook" class="social-ico">f</a>
+        <a href="#" aria-label="Instagram" class="social-ico">◎</a>
+        <a href="#" aria-label="Buscar">🔍</a>
+        <a href="#" aria-label="Cuenta">👤</a>
+        <a href="#" aria-label="Carrito" class="cart">🛒<span class="cart-count">0</span></a>
+      </div>
+    </div>
+  </header>
+  <section class="collection-hero">
+    <nav class="breadcrumb">
+      <a href="#">Inicio</a> <span>/</span> <span>Jabones Artesanales</span>
+    </nav>
+    <h1>Jabones Artesanales</h1>
+    <p class="collection-desc">
+      Bohí ofrece jabones artesanales elaborados con ingredientes naturales y
+      procesos amigables con el medio ambiente. Cada jabón está diseñado para
+      brindar limpieza, hidratación y bienestar, incorporando flores naturales,
+      aromas suaves y una presentación artesanal que los diferencia de los
+      productos industriales. Peso aproximado de 100&nbsp;g por pieza.
+    </p>
+    <div class="hero-tags">
+      <span>🌿 Ingredientes naturales</span>
+      <span>✋ Hechos a mano</span>
+      <span>♻ Amigables con el ambiente</span>
+    </div>
+  </section>
+  <div class="collection-layout">
+    <aside class="filters">
+      <div class="filter-group">
+        <h3>Disponibilidad</h3>
+        <label><input type="checkbox" checked> En existencia <span>(6)</span></label>
+        <label><input type="checkbox"> Agotado <span>(0)</span></label>
+      </div>
+      <div class="filter-group">
+        <h3>Aroma</h3>
+        <label><input type="checkbox"> Floral <span>(2)</span></label>
+        <label><input type="checkbox"> Relajante <span>(1)</span></label>
+        <label><input type="checkbox"> Piel sensible <span>(2)</span></label>
+      </div>
+      <div class="filter-group price-fixed">
+        <h3>Precio único</h3>
+        <p class="big-price">$85<span>.00 MXN</span></p>
+        <p class="price-note">Todos los jabones</p>
+      </div>
+    </aside>
+    <main class="products-area">
+      <div class="toolbar">
+        <span class="count">6 productos</span>
+        <label class="sort">
+          Ordenar por:
+          <select>
+            <option>Relevancia</option>
+            <option>Más vendidos</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="product-grid" id="productGrid"></div>
+    </main>
+  </div>
+  <section class="info-section" id="ingredientes">
+    <div class="info-inner">
+      <div class="info-media">
+        <img src="images/7.jpeg" alt="Jabón artesanal con flores naturales">
+      </div>
+      <div class="info-text">
+        <span class="eyebrow">Materias primas naturales</span>
+        <h2>Ingredientes Naturales</h2>
+        <p>
+          Los jabones Bohí están elaborados con materias primas de origen natural
+          cuidadosamente seleccionadas para garantizar calidad y cuidado de la piel.
+          La selección busca reducir el uso de sustancias agresivas y promover
+          alternativas más sostenibles para el cuidado personal.
+        </p>
+        <ul class="check-list">
+          <li>Glicerina vegetal</li>
+          <li>Esencias aromáticas naturales</li>
+          <li>Flores naturales deshidratadas</li>
+          <li>Colorantes cosméticos seguros</li>
+          <li>Extractos vegetales</li>
+          <li>Aceites naturales</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="info-section alt" id="proceso">
+    <div class="info-inner reverse">
+      <div class="info-media">
+        <img src="images/9.jpeg" alt="Proceso artesanal de elaboración">
+      </div>
+      <div class="info-text">
+        <span class="eyebrow">Hecho a mano, pieza por pieza</span>
+        <h2>Proceso Artesanal</h2>
+        <p>El proceso de elaboración de Bohí es completamente artesanal, lo que
+          permite conservar la calidad del producto y ofrecer piezas únicas con
+          acabados artesanales.</p>
+        <ol class="steps">
+          <li><span>1</span> Selección de materias primas</li>
+          <li><span>2</span> Fundición de la glicerina vegetal</li>
+          <li><span>3</span> Incorporación de esencias y colorantes</li>
+          <li><span>4</span> Colocación de flores naturales decorativas</li>
+          <li><span>5</span> Vertido en moldes</li>
+          <li><span>6</span> Enfriamiento y solidificación</li>
+          <li><span>7</span> Desmolde y revisión de calidad</li>
+          <li><span>8</span> Empaque final para comercialización</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+  <section class="info-section" id="empaque">
+    <div class="info-inner">
+      <div class="info-media">
+        <img src="images/6.jpeg" alt="Empaque ecológico de papel kraft">
+      </div>
+      <div class="info-text">
+        <span class="eyebrow">Compromiso con el planeta</span>
+        <h2>Empaque Ecológico</h2>
+        <p>
+          Bohí utiliza empaques ecológicos diseñados para proteger el producto y
+          reducir el impacto ambiental. Para exportación se utilizan cajas
+          reforzadas y materiales de protección que garantizan la conservación del
+          producto durante el traslado.
+        </p>
+        <ul class="check-list">
+          <li>Papel kraft reciclable</li>
+          <li>Etiquetas ecológicas</li>
+          <li>Diseño minimalista y elegante</li>
+          <li>Protección para transporte nacional e internacional</li>
+          <li>Materiales compatibles con la sustentabilidad</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="contact-section" id="contacto">
+    <h2>Contacto</h2>
+    <p class="contact-sub">Bohí – Jabones Artesanales Naturales</p>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <span class="contact-ico">✉</span>
+        <h4>Correo</h4>
+        <a href="mailto:Bohimxartesanal@gmail.com">Bohimxartesanal@gmail.com</a>
+      </div>
+      <div class="contact-card">
+        <span class="contact-ico">📞</span>
+        <h4>Teléfono</h4>
+        <a href="tel:+527713922807">+52 (771) 392 2807</a>
+      </div>
+      <div class="contact-card">
+        <span class="contact-ico">📍</span>
+        <h4>Ubicación</h4>
+        <p>Hidalgo, México</p>
+      </div>
+      <div class="contact-card">
+        <span class="contact-ico">🕐</span>
+        <h4>Horario</h4>
+        <p>Lunes a Viernes<br>9:00 – 18:00 h</p>
+      </div>
+      <div class="contact-card">
+        <span class="contact-ico">📘</span>
+        <h4>Facebook</h4>
+        <a href="#">Bohí Jabones Artesanales</a>
+      </div>
+      <div class="contact-card">
+        <span class="contact-ico">◎</span>
+        <h4>Instagram</h4>
+        <a href="#">@bohi.mx</a>
+      </div>
+    </div>
+  </section>
+  <footer class="site-footer">
+    <div class="footer-cols">
+      <div class="footer-col footer-brand">
+        <span class="logo-mark">✻</span>
+        <span class="logo-name">Bohí</span>
+        <p>Hecho en México con amor, para el mundo.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Acerca de</h4>
+        <a href="#">Nuestra historia</a>
+        <a href="#ingredientes">Ingredientes naturales</a>
+        <a href="#proceso">Proceso artesanal</a>
+        <a href="#empaque">Empaque ecológico</a>
+      </div>
+      <div class="footer-col">
+        <h4>Catálogo</h4>
+        <a href="#">Rosa</a>
+        <a href="#">Lavanda</a>
+        <a href="#">Caléndula</a>
+        <a href="#">Manzanilla</a>
+        <a href="#">Miel &amp; Glicerina</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <a href="tel:+527713922807">📞 +52 (771) 392 2807</a>
+        <a href="mailto:Bohimxartesanal@gmail.com">✉ Bohimxartesanal@gmail.com</a>
+        <a href="#">📍 Hidalgo, México</a>
+        <a href="#">◎ @bohi.mx</a>
+      </div>
+      <div class="footer-col newsletter">
+        <h4>Suscríbete</h4>
+        <p>Recibe novedades y ofertas exclusivas.</p>
+        <form class="news-form" onsubmit="return false">
+          <input type="email" placeholder="Tu correo electrónico" required>
+          <button type="submit">→</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="copyright">© 2026 Bohí · Jabones Artesanales · México (MXN $)</p>
+    </div>
+  </footer>
+
+  <div class="logo-overlay" id="logoOverlay" onclick="closeLogo()">
+    <span class="logo-overlay-close" aria-label="Cerrar">&times;</span>
+    <img src="images/logo-sq.jpg" alt="Bohí · Jabones Artesanales">
+  </div>
+
+  <script src="products.js"></script>
+  <script>
+    function openLogo(e){ e.preventDefault(); document.getElementById('logoOverlay').classList.add('open'); }
+    function closeLogo(){ document.getElementById('logoOverlay').classList.remove('open'); }
+    document.addEventListener('keydown', e => { if(e.key === 'Escape') closeLogo(); });
+  </script>
+</body>
+</html>
